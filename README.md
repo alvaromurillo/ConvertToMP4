@@ -7,7 +7,8 @@ Convert your *.avi downloaded video files to *.mp4 with automator and HandBrake
 ##Convert with a Service
 
 - Download HandBreakCLI (Command Line) from [HandBrake Downloads Page](http://handbrake.fr/downloads.php), and install into your prefered directory, for example into ```/Applications/HandBreakCLI```
-- Open Automator -> New document -> Select Service.
+- Open Automator -> New document -> Service.  
+![Automator](Screenshots/automator_service_wizard.png)
 - Select "movie files" in services receives selected and "Finder.app" in application.
 - Drag the "Run Shell Script" action.
 - Select "/bin/bash" in Shell and "as arguments" in Pass input. 
@@ -19,7 +20,7 @@ do
   /Applications/HandBrakeCLI -i "$if" -o "$if".mp4 --preset="Normal"
 done
 ```
-![ConvertService](converter_automator_service.png)
+![Automator](Screenshots/automator_converter_service.png)
 - Finally save the Service with the name "Convert to mp4".
 
 Now you can convert your video files with Right-click -> Services -> Convert to mp4
@@ -29,8 +30,8 @@ Note: If you need delete your custom services, you can find it in ```/Users/Your
 ##Convert automatically with a Folder Action
 
 - Download HandBreakCLI (Command Line) from [HandBrake Downloads Page](http://handbrake.fr/downloads.php), and install into your prefered directory, for example into ```/Applications/HandBreakCLI```
-- Open Automator -> New document -> Select Folder Action.  
-![Automator](/wizard.png)
+- Open Automator -> New document -> Folder Action.  
+![Automator](Screenshots/automator_folder_action_wizard.png)
 - Select the folder where you download your videos.
 - Configure the workflow actions like the image below:  
-![Automator](/configuration.png)
+![Automator](Screenshots/automator_converter_folder_action.png)
